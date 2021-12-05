@@ -42,7 +42,7 @@ def part1(test: bool = False) -> Any:
     for value in input_values:
         start_x, end_x = value.starting_coordinates.x, value.end_coordinates.x
         start_y, end_y = value.starting_coordinates.y, value.end_coordinates.y
-        if start_x == end_x:
+        if (start_x == end_x) and (start_y != end_y):
             starting_y = max(start_y, end_y)
             for i in range(abs(start_y - end_y) + 1):
                 intersection = Coordinates(start_x, starting_y - i)
@@ -52,7 +52,7 @@ def part1(test: bool = False) -> Any:
                 else:
                     diagram[intersection] = 1
 
-        if start_y == end_y:
+        if (start_y == end_y) and (start_x != end_x):
             starting_x = max(start_x, end_x)
             for i in range(abs(start_x - end_x) + 1):
                 intersection = Coordinates(starting_x - i, start_y)
@@ -67,6 +67,36 @@ def part1(test: bool = False) -> Any:
 
 def part2(test: bool = False) -> Any:
     input_values = read_input(test)
+    diagram = {}
+
+    for value in input_values:
+        start_x, end_x = value.starting_coordinates.x, value.end_coordinates.x
+        start_y, end_y = value.starting_coordinates.y, value.end_coordinates.y
+        if (start_x == end_x) and (start_y != end_y):
+            starting_y = max(start_y, end_y)
+            for i in range(abs(start_y - end_y) + 1):
+                intersection = Coordinates(start_x, starting_y - i)
+
+                if intersection in diagram:
+                    diagram[intersection] += 1
+                else:
+                    diagram[intersection] = 1
+
+        elif (start_y == end_y) and (start_x != end_x):
+            starting_x = max(start_x, end_x)
+            for i in range(abs(start_x - end_x) + 1):
+                intersection = Coordinates(starting_x - i, start_y)
+
+                if intersection in diagram:
+                    diagram[intersection] += 1
+                else:
+                    diagram[intersection] = 1
+
+        else:
+            #TODO: Implement the second part of day 5
+            pass
+
+    return sum([value > 1 for value in diagram.values()])
 
 
 print(part1())
