@@ -24,3 +24,8 @@ This repository contains my implementation (**sometimes unnecessarily complicate
 
 - [ ] Part 1
 - [ ] Part 2
+
+### [Day 4 - Giant Squid](https://adventofcode.com/2021/day/4)
+
+- [ ] Part 1
+- [ ] Part 2
