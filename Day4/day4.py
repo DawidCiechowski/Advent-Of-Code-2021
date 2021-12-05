@@ -2,7 +2,7 @@ from typing import List, Any, Tuple
 from pathlib import Path
 
 
-def extract_boards(boards_str: str) -> List[Any]:
+def extract_boards(boards_str: List[str]) -> List[Any]:
     boards = []
     for i in range(0, len(boards_str), 6):
         board = []
