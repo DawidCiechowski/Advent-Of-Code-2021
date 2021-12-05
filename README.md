@@ -4,9 +4,9 @@
 
 [Advent of code](adventofcode.com) is a website, with set of yearly programming challanges for first 25 days of December.
 
-This repository contains my implementation (**sometimes unnecessarily complicated**) of these challenges.
+This repository contains my implementation (**sometimes unnecessarily complicated**) of these challenges. All of the challenges are implemented in Python (*Version = 3.8.5*). Most likely will also implement all of these in **GoLang** at later date.
 
-**IMPORTANT** - *Due to busy schedule, these challenges are not finished each day, hence there are days, where multiple challenges were done.*
+**IMPORTANT**: *Due to busy schedule, these challenges are not finished each day (as they should be, technically), hence there are days, where multiple challenges were done at once.*
 
 ## Challenges:
 
@@ -32,5 +32,5 @@ This repository contains my implementation (**sometimes unnecessarily complicate
 
 ### [Day 5 - Hydothermal Venture](https://adventofcode.com/2021/day/5)
 
-- [ ] Part 1
+- [x] Part 1
 - [ ] Part 2
