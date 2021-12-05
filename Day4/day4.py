@@ -20,14 +20,9 @@ def extract_boards(boards_str: List[str]) -> List[Any]:
 
 
 def read_input(test: bool = False) -> Tuple[List[int], List[Any]]:
-    if test:
-        with open(f"{Path(__file__).parent}/test_input.txt", "r") as f:
-            values = [int(value) for value in f.readline().strip().split(",")]
-            boards = extract_boards(f.readlines())
-
-            return values, boards
-
-    with open(f"{Path(__file__).parent}/input.txt", "r") as f:
+    file_name = "test_input.txt" if test else "input.txt"
+    
+    with open(f"{Path(__file__).parent}/{file_name}", "r") as f:
         values = [int(value) for value in f.readline().strip().split(",")]
         boards = extract_boards(f.readlines())
 

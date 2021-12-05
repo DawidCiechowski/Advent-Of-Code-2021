@@ -2,12 +2,10 @@ from typing import List
 from pathlib import Path
 
 def get_input_values(test: bool = False) -> List[int]:
-    if test:
-        with open(f"{Path(__file__).parent}/test_input.txt") as f:
-            return [int(value) for value in f.read().split("\n")]
-    
-    with open(f"{Path(__file__).parent}/input.txt") as f:
-        return [int(value) for value in f.read().split("\n")]
+    file_name = "test_input.txt" if test else "input.txt"
+
+    with open(f"{Path(__file__).parent}/{file_name}") as f:
+        return [int(value) for value in f.readlines()]
     
     
 def part1(test: bool = False):

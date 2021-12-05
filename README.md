@@ -20,7 +20,7 @@ This repository contains my implementation (**sometimes unnecessarily complicate
 - [x] Part 1
 - [x] Part 2
 
-### [Part 3 - Binary Diagnostic](https://adventofcode.com/2021/day/3)
+### [Day 3 - Binary Diagnostic](https://adventofcode.com/2021/day/3)
 
 - [ ] Part 1
 - [ ] Part 2
@@ -29,3 +29,8 @@ This repository contains my implementation (**sometimes unnecessarily complicate
 
 - [x] Part 1
 - [x] Part 2
+
+### [Day 5 - Hydothermal Venture](https://adventofcode.com/2021/day/5)
+
+- [ ] Part 1
+- [ ] Part 2
