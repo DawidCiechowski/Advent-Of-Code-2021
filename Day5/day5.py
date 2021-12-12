@@ -15,7 +15,7 @@ class LineCoordinates:
     end_coordinates: Coordinates
 
 
-def read_input(test: bool = False) -> Any:
+def read_input(test: bool = False) -> List[LineCoordinates]:
     file_name = "test_input.txt" if test else "input.txt"
     input_values = []
     with open(f"{Path(__file__).parent}/{file_name}", "r") as f:
@@ -35,7 +35,7 @@ def read_input(test: bool = False) -> Any:
     return input_values
 
 
-def part1(test: bool = False) -> Any:
+def part1(test: bool = False) -> int:
     input_values = read_input(test)
     diagram = {}
 
@@ -92,9 +92,9 @@ def part2(test: bool = False) -> Any:
                 else:
                     diagram[intersection] = 1
 
-        else:
-            #TODO: Implement the second part of day 5
+        elif abs(start_x - end_y) == abs(start_y - end_y):
             pass
+            
 
     return sum([value > 1 for value in diagram.values()])
 

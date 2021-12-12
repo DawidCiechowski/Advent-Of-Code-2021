@@ -34,3 +34,8 @@ This repository contains my implementation (**sometimes unnecessarily complicate
 
 - [x] Part 1
 - [ ] Part 2
+
+### [Day 6 - Lanternfish](https://adventofcode.com/2021/day/6)
+
+- [x] Part 1
+- [ ] Part 2
